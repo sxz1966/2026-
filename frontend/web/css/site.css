@@ -9,8 +9,12 @@
     --wc-navy-soft: #0d1a38;
     --wc-surface: #111f3f;
     --wc-surface-2: #16264a;
-    --wc-red: #e63946;
-    --wc-red-bright: #ff4d5a;
+    --wc-accent: #35d0c0;
+    --wc-accent-bright: #5fe3d2;
+    --wc-accent-soft: rgba(53, 208, 192, .16);
+    --wc-danger: #e63946;
+    --wc-danger-bright: #ff4d5a;
+    --wc-success: #4ade80;
     --wc-text: #eef3ff;
     --wc-muted: #9fb0d0;
     --wc-border: rgba(159, 176, 208, .18);
@@ -27,7 +31,7 @@ body.wc-body {
     margin: 0;
     background-color: var(--wc-navy);
     background-image:
-        radial-gradient(circle at 15% 0%, rgba(230, 57, 70, .16), transparent 34%),
+        radial-gradient(circle at 15% 0%, rgba(53, 208, 192, .14), transparent 34%),
         radial-gradient(circle at 85% 12%, rgba(35, 64, 128, .45), transparent 46%);
     background-attachment: fixed;
     color: var(--wc-text);
@@ -46,12 +50,12 @@ body.wc-body {
 }
 
 .wc-body a {
-    color: #ff7a85;
+    color: var(--wc-accent-bright);
 }
 
 .wc-body a:hover,
 .wc-body a:focus {
-    color: #ffa3aa;
+    color: #9bf5ea;
     text-decoration: none;
 }
 
@@ -96,8 +100,8 @@ body.wc-body {
     display: inline-block;
     padding: 3px 10px;
     border-radius: 8px;
-    background: var(--wc-red);
-    color: #fff;
+    background: var(--wc-accent);
+    color: #06231f;
     font-size: 14px;
     letter-spacing: 2px;
 }
@@ -130,9 +134,9 @@ body.wc-body {
 }
 
 .wc-nav-link.is-active {
-    color: #fff !important;
-    background: rgba(230, 57, 70, .16);
-    box-shadow: inset 0 -2px 0 var(--wc-red);
+    color: var(--wc-accent-bright) !important;
+    background: var(--wc-accent-soft);
+    box-shadow: inset 0 -2px 0 var(--wc-accent);
 }
 
 .wc-header-actions {
@@ -176,9 +180,9 @@ body.wc-body {
 .wc-btn,
 .wc-body .btn-primary,
 .wc-body .btn-success {
-    background: var(--wc-red);
-    border-color: var(--wc-red);
-    color: #fff !important;
+    background: var(--wc-accent);
+    border-color: var(--wc-accent);
+    color: #06231f !important;
 }
 
 .wc-btn:hover,
@@ -187,9 +191,9 @@ body.wc-body {
 .wc-body .btn-primary:focus,
 .wc-body .btn-success:hover,
 .wc-body .btn-success:focus {
-    background: var(--wc-red-bright);
-    border-color: var(--wc-red-bright);
-    color: #fff !important;
+    background: var(--wc-accent-bright);
+    border-color: var(--wc-accent-bright);
+    color: #06231f !important;
 }
 
 .wc-btn-secondary,
@@ -208,20 +212,24 @@ body.wc-body {
     color: #fff !important;
 }
 
-.wc-body .btn-danger {
-    background: #9d1f2b;
-    border-color: #9d1f2b;
+.wc-body .btn-danger,
+.wc-btn-danger {
+    background: var(--wc-danger);
+    border-color: var(--wc-danger);
     color: #fff !important;
 }
 
 .wc-body .btn-danger:hover,
-.wc-body .btn-danger:focus {
-    background: #b32534;
-    border-color: #b32534;
+.wc-body .btn-danger:focus,
+.wc-btn-danger:hover,
+.wc-btn-danger:focus {
+    background: var(--wc-danger-bright);
+    border-color: var(--wc-danger-bright);
+    color: #fff !important;
 }
 
 .wc-body .btn-link {
-    color: #ff7a85;
+    color: var(--wc-accent-bright);
 }
 
 .wc-btn-sm,
@@ -244,7 +252,7 @@ body.wc-body {
 .wc-section-title {
     margin: 0 0 18px;
     padding-left: 14px;
-    border-left: 4px solid var(--wc-red);
+    border-left: 4px solid var(--wc-accent);
     font-size: 24px;
 }
 
@@ -259,7 +267,7 @@ body.wc-body {
     border: 1px solid var(--wc-border);
     border-radius: 20px;
     background:
-        radial-gradient(circle at 82% 18%, rgba(230, 57, 70, .38), transparent 46%),
+        radial-gradient(circle at 82% 18%, rgba(53, 208, 192, .3), transparent 46%),
         linear-gradient(135deg, #101f45 0%, #08122b 72%);
     box-shadow: var(--wc-shadow);
 }
@@ -286,7 +294,7 @@ body.wc-body {
 .wc-hero-kicker {
     display: inline-block;
     margin-bottom: 14px;
-    color: var(--wc-red-bright);
+    color: var(--wc-accent-bright);
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -311,7 +319,7 @@ body.wc-body {
 
 .wc-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(230, 57, 70, .45);
+    border-color: rgba(53, 208, 192, .45);
 }
 
 .wc-card-body {
@@ -423,9 +431,9 @@ body.wc-body {
 .wc-body .pagination > .active > a,
 .wc-body .pagination > .active > a:hover,
 .wc-body .pagination > .active > span {
-    border-color: var(--wc-red);
-    background: var(--wc-red);
-    color: #fff;
+    border-color: var(--wc-accent);
+    background: var(--wc-accent);
+    color: #06231f;
 }
 
 /* 表单与 ActiveForm */
@@ -460,8 +468,8 @@ body.wc-body {
 }
 
 .wc-body .form-control:focus {
-    border-color: var(--wc-red);
-    box-shadow: 0 0 0 3px rgba(230, 57, 70, .18);
+    border-color: var(--wc-accent);
+    box-shadow: 0 0 0 3px rgba(53, 208, 192, .18);
 }
 
 .wc-body .form-control::placeholder {
@@ -479,7 +487,7 @@ body.wc-body {
 }
 
 .wc-body .has-error .form-control {
-    border-color: var(--wc-red-bright);
+    border-color: var(--wc-danger-bright);
 }
 
 .wc-body .has-error .help-block,
@@ -492,7 +500,7 @@ body.wc-body {
 .wc-body .error-summary,
 .wc-body .alert-danger {
     border: 1px solid rgba(230, 57, 70, .45);
-    border-left: 3px solid var(--wc-red);
+    border-left: 3px solid var(--wc-danger);
     background: rgba(230, 57, 70, .12);
     color: #ffb3ba;
 }
@@ -502,18 +510,24 @@ body.wc-body {
 .wc-badge {
     display: inline-block;
     padding: 2px 10px;
-    border: 1px solid rgba(230, 57, 70, .4);
+    border: 1px solid rgba(53, 208, 192, .4);
     border-radius: 999px;
-    background: rgba(230, 57, 70, .16);
-    color: #ff8b94;
+    background: rgba(53, 208, 192, .14);
+    color: #7fe9dc;
     font-size: 12px;
     font-weight: 600;
 }
 
 .wc-badge-success {
-    border-color: rgba(53, 208, 192, .35);
-    background: rgba(53, 208, 192, .14);
-    color: #5fe3d2;
+    border-color: rgba(74, 222, 128, .35);
+    background: rgba(74, 222, 128, .14);
+    color: #86efac;
+}
+
+.wc-badge-danger {
+    border-color: rgba(230, 57, 70, .4);
+    background: rgba(230, 57, 70, .16);
+    color: #ff8b94;
 }
 
 .wc-badge-muted {
@@ -530,9 +544,9 @@ body.wc-body {
 }
 
 .wc-body .alert-success {
-    border-color: rgba(53, 208, 192, .35);
-    background: rgba(53, 208, 192, .1);
-    color: #b8f3ec;
+    border-color: rgba(74, 222, 128, .35);
+    background: rgba(74, 222, 128, .1);
+    color: #b9f6cd;
 }
 
 .wc-body .alert-info {

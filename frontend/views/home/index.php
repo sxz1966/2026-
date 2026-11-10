@@ -39,7 +39,7 @@ $formModel->addRule(['title', 'email'], 'required')
     <section class="wc-hero wc-section">
         <span class="wc-hero-kicker">STAGE 01 · PUBLIC UI KIT</span>
         <h1>2026 世界杯专题站</h1>
-        <p>深海军蓝底色、亮红色点缀与高对比卡片。本页用于验收公共布局、GridView、ActiveForm 等基础组件的深色外观。</p>
+        <p>深海军蓝底色、青色点缀与高对比卡片。本页用于验收公共布局、GridView、ActiveForm 等基础组件的深色外观。</p>
         <div class="wc-hero-actions">
             <a class="wc-btn" href="#wc-components">查看组件</a>
             <a class="wc-btn wc-btn-secondary" href="#wc-form">查看表单</a>
@@ -65,9 +65,9 @@ $formModel->addRule(['title', 'email'], 'required')
             </div>
             <div class="wc-card">
                 <div class="wc-card-body">
-                    <span class="wc-swatch" style="background:#e63946"></span>
-                    <h3 class="wc-card-title">亮红点缀</h3>
-                    <p class="wc-card-text">主按钮、强调线与状态标记 #e63946。</p>
+                    <span class="wc-swatch" style="background:#35d0c0"></span>
+                    <h3 class="wc-card-title">青色点缀</h3>
+                    <p class="wc-card-text">主按钮、导航高亮与强调线 #35d0c0。</p>
                 </div>
             </div>
             <div class="wc-card">
@@ -88,7 +88,9 @@ $formModel->addRule(['title', 'email'], 'required')
                     <h3 class="wc-card-title">公共卡片</h3>
                     <p class="wc-card-text">使用 <code>wc-card</code> 与 <code>wc-card-body</code> 包裹内容，整站卡片风格保持一致。</p>
                     <p><a class="wc-btn wc-btn-sm" href="#wc-components">主按钮</a>
-                        <a class="wc-btn wc-btn-secondary wc-btn-sm" href="#wc-components">次按钮</a></p>
+                        <a class="wc-btn wc-btn-secondary wc-btn-sm" href="#wc-components">次按钮</a>
+                        <a class="wc-btn wc-btn-danger wc-btn-sm" href="#wc-components">删除</a></p>
+                    <p class="wc-muted">红色只用于删除和错误状态。</p>
                 </div>
             </div>
             <div class="wc-card">
